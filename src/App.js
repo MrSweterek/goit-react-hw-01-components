@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import Profile from './components/Profile';
+import Statistics from './components/Statistic';
+import FriendList from './components/FriendList';
+import TransactionHistory from './components/TransactionHistory';
+
+import user from './data/user.json';
+import data from './data/data.json';
+import friends from './data/friends.json';
+import transactions from './data/transactions.json';
+
 import './App.css';
+import propTypes from 'prop-types';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />;
     </div>
   );
 }
 
+Profile.propTypes = {
+  username: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  avatar: propTypes.string.isRequired,
+  stats: propTypes.array.isRequired,
+};
+
+Statistics.propTypes = {
+  title: propTypes.string,
+  stats: propTypes.object.isRequired,
+};
+
+FriendList.propTypes = {
+  friends: propTypes.object.isRequired,
+};
+
+TransactionHistory.propTypes = {
+  items: propTypes.object.isRequired,
+};
 export default App;
