@@ -1,5 +1,6 @@
 {
   "name": "zad1",
+  "homepage": "https://mrsweterek.github.io/goit-react-hw-01-components/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +16,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "homepage": "https://mrsweterek.github.io/goit-react-hw-01-components/",
     "lint:js": "eslint src/**/*.{js,jsx}",
     "build": "react-scripts build",
     "test": "react-scripts test",
