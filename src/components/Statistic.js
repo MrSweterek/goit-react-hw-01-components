@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 function getRandomColor() {
   //funkcja z https://stackoverflow.com/questions/1484506/random-color-generator
   var letters = '0123456789ABCDEF';

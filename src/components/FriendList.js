@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import FriendListItem from './FriendListItem';
 import propTypes from 'prop-types';
 
